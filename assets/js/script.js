@@ -27,21 +27,22 @@ function showDiapo(currentDiapoIndexParametre) {
     if (currentDiapoIndexParametre >= diapos.length) {
         currentDiapoIndex = 0;
 } else if (currentDiapoIndexParametre < 0) {
-            currentDiapoIndex = diapos.lenth -1;
+            currentDiapoIndex = diapos.length -1;
 } 
-    
-// }
-    // diapos[nb].style.display = "block";
-    // console.log(nb);
     diapos[currentDiapoIndex].style.display = "block";
-    // console.log("Longeur de tableau des diapos =>" + diapos.length);
-    // cosole.log("currentDiapoIndex  => " + currentDiapoIndex)
 
-
-
-  
+    console.clear();
+    console.log("Longueur du tableau des diapos => " + diapos.length);
+    console.log("currentDiapoIndex => " + currentDiapoIndex);
+    console.log("currentDiapoIndex passé en parametre de showdiapo => " + currentDiapoIndexParametre);
    
+
+
+ 
 
 }
 
 showDiapo(currentDiapoIndex);
+
+
+
