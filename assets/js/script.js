@@ -19,19 +19,24 @@ document.querySelector('.suivant').addEventListener('click' ,
 
 
 
-function showDiapo(nb) {
+function showDiapo(currentDiapoIndexParametre) {
     diapos.forEach(
         (diapo) => {diapo.style.display = "none"}
     );
 
-//     if (nb => diapos.length) {
-//         currentDiapoIndex = 0;
-//         nb = 0;
+    if (currentDiapoIndexParametre >= diapos.length) {
+        currentDiapoIndex = 0;
+} else if (currentDiapoIndexParametre < 0) {
+            currentDiapoIndex = diapos.lenth -1;
+} 
     
 // }
     // diapos[nb].style.display = "block";
     // console.log(nb);
-    diapos[nb].style.display = "block";
+    diapos[currentDiapoIndex].style.display = "block";
+    // console.log("Longeur de tableau des diapos =>" + diapos.length);
+    // cosole.log("currentDiapoIndex  => " + currentDiapoIndex)
+
 
 
   
